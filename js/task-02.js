@@ -6,4 +6,12 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const liEl = document.createElement('li');
+const listEl = ingredients.map(ingredient=>{
+  const elem =  document.createElement('li');
+  elem.classList.add('item');
+  elem.textContent = (`${ingredient}`);
+  return elem;
+})
+
+const ulList = document.getElementById('ingredients');
+ulList.append(...listEl);
