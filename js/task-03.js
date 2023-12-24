@@ -12,3 +12,20 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// Отримуємо доступ до gallery
+// Перебираємо масив об'єктів images за допомогою map
+// Через шаблоні строки створюємо елемент <li> з <img> всередині,
+// де через інтерполяцію додаємо значення url і alt
+// та збираємо в один масив за допомогою join()
+// Додаємо розмітку у галерею методом insertAdjacentHTML()
+// Додаємо мінімальну розмітку у css файл
+
+
+const gallery = document.querySelector(".gallery");
+
+const markup = images.map((image) => {
+  return `<li class= imgGallery>
+<img src = "${image.url}" alt = "${image.alt}" width = "300" height = "300" >
+  </li>`;
+}).join("");
+gallery.insertAdjacentHTML("beforeend", markup);

@@ -1,17 +1,6 @@
-
-
-const divEl = document.querySelector('#counter');
-
-const newHeader = document.createElement('H1');
-newHeader.innerText = 'NEW TITLE';
-divEl.append(newHeader);
-
-const mainButton = document.querySelector('button');
-
-const buttonCopy = mainButton.cloneNode(true)
-divEl.append(buttonCopy);
-buttonCopy.innerText = 'delete';
-
-const htmlExample = '<h2>frontend</h2>';
-divEl.insertAdjacentHTML('beforeend',htmlExample);
-
+// Отримуємо доступ до span value та кнопок
+// Створюємо змінну counterValue, в якій буде зберігатися 
+// поточне значення лічильника та ініціалізуємо її значенням 0
+// Вішаємо прослуховувач подій click на кнопки
+// Створюємо функціі для кожноє кнопки, де на одній значення буде зменшуватися, на іншій збільшуватися
+// Привласнюємо поточне значення лічільнику
